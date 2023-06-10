@@ -1,21 +1,27 @@
-# Base image
+# Base Image
+
 FROM node:lts-alpine3.17
 
-# set the working directory
+# Set the working Directory
 WORKDIR /app
 
-# Copy package.json
-COPY package*.json .
+# Copy Package.json
 
-# Install dependecies
+COPY package*.json ./
+
+# Install Dependencies
+
 RUN npm install
 
 # Copy source code to the container work directory
+
 COPY . .
 
-# Expose port 
+# Expose Port
+
 EXPOSE 3000
 
-# Entry for CMD
-CMD ["node", "server.js"] 
+# Entry for CMD 
+
+CMD [ "node", "server.js" ]
 

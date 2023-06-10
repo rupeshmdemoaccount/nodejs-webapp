@@ -16,10 +16,13 @@ spec:
     spec:
       containers:
         - name: nodesy-container
-          image: abdurahim/nodejswapp:latest
+         // image: boboacr.azurecr.io/nodejsapp:v1
+          image: abdurahim/nodejswebapp:latest
           ports:
             - containerPort: 3000
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -29,6 +32,8 @@ spec:
     app: nodesy-app
   ports:
     - protocol: TCP
-      port: 3000
+      port: 80
       targetPort: 3000
   type: LoadBalancer
+
+

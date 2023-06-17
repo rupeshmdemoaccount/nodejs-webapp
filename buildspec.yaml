@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 069279771141.dkr.ecr.us-east-2.amazonaws.com
-      - IMAGE_REPO_NAME=069279771141.dkr.ecr.us-east-2.amazonaws.com/nodejs-webapp:v1.0.0.RELEASE
+      - IMAGE_REPO_NAME=069279771141.dkr.ecr.us-east-2.amazonaws.com/nodejs-webapp
       - IMAGE_TAG=v1.0.0.RELEASE
   build:
     commands:

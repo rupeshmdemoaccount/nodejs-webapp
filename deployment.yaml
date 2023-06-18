@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodesy-container
-        image: abdurahim/nodejswebapp:v1
+        image: 069279771141.dkr.ecr.us-east-2.amazonaws.com/nodejs-webapp:v1.0.0.RELEASE
         ports:
         - containerPort: 3000
         
